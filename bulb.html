@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulb On/Off</title>
+
+    <style>
+      img{
+          width: 200px;
+          height: 250px;
+          display: flex;
+          justify-content: center;          
+      }
+      button{
+          margin-left: 35px;
+          padding: 15px;
+          background-color: black;
+          color: white;
+      }
+      button:nth-child(odd){
+          background-color: yellow;
+          color: black;
+      }
+    </style>
+</head>
+<body>
+    <img src="off.png" id="my-photo">
+    <button onclick="changeLight(0)">off</button>
+    <button onclick="changeLight(1)">on</button>
+    
+    
+
+    <script>
+        function changeLight(value){
+            var photo ;
+            if(value == 0){
+               photo ='off.png'
+            }else{
+                photo = 'on.png'
+            } document.getElementById('my-photo').src = photo
+        }
+
+    </script>
+</body>
+</html>
